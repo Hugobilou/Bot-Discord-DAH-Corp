@@ -1,0 +1,19 @@
+{
+  "name": "philibert",
+  "version": "1.0.0",
+  "description": "Bot discord",
+  "main": "index.js",
+  "scripts": {
+    "lavalink": "java -jar Lavalink.jar",
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "better-sqlite3": "^7.1.0",
+    "discord.js": "^12.3.1",
+    "enmap": "^5.7.1",
+    "erela.js": "^2.0.0",
+    "mongoose": "^5.10.4"
+  }
+}
