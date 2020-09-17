@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Bot discord",
   "main": "index.js",
+  "engine": { "node": "12.18.4"},
   "scripts": {
     "lavalink": "java -jar Lavalink.jar",
+	"start": "node main.js",
     "test": "test"
   },
   "author": "",
