@@ -1,5 +1,4 @@
 module.exports = {
-    TOKEN: "NTM3MzMxNDk0MjcyNjMwODA0.XEda8w.d8eiMlWgFRA3plS2RkTd1GphIvA",
     PREFIX: "$",
     DBCONNECTION: "mongodb://localhost:27017/discord",
     LAVALINK_HOST: "localhost",
