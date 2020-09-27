@@ -1,11 +1,9 @@
 const { Client, Collection } = require('discord.js');
-const { TOKEN, PREFIX, LAVALINK_HOST, LAVALINK_PASSWORD, LAVALINK_PORT} = require("./config");
+const { TOKEN, PREFIX} = require("./config");
 const {readdirSync} = require('fs');
-// const { ErelaClient } = require('erela.js');
 
 const client = new Client();
 client.commands = new Collection();
-//client.mongoose = require("./mongoose");
 
 const loadCommands = (dir = "./commands/") => {
     readdirSync(dir).forEach(dirs => {
@@ -42,24 +40,6 @@ client.on('message', msg => {
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
     client.user.setPresence({activity: { name: '$help', type: 'PLAYING'}});
-
-    // client.music = new ErelaClient(client, [
-    //     {
-    //         host: "localhost", //client.config.LAVALINK_HOST,
-    //         port: 8000, //client.config.LAVALINK_PORT,
-    //         password: "iskpassword", //client.config.LAVALINK_PASSWORD
-    //     }
-    //]);
-
-    // client.music.on("nodeConnect", node => console.log("New node connected"));
-    // client.music.on("nodeError", (node, error) => console.log(`Node error: ${error.message}`));
-    // client.music.on("trackStar", (player, track) => player.textChannel.send(`Now playing: ${track.title}`));
-    // client.music.on("queueEnd", player => {
-    //     player.test.channel.send("Queue has ended.")
-    //     client.music.players.destroy(player.guild.id);
-    // });
 });
-//client.mongoose.init();
-client.login(TOKEN);
 
-// node .\main.js
+client.login(process.env.TOKEN);

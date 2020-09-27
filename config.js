@@ -1,9 +1,5 @@
 module.exports = {
     PREFIX: "$",
-    DBCONNECTION: "mongodb://localhost:27017/discord",
-    LAVALINK_HOST: "localhost",
-    LAVALINK_PORT: 8000,
-    LAVALINK_PASSWORD: "idkpassword",
     VERBES: [
     "abaisse",
     "abandonne",
