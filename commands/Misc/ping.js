@@ -4,7 +4,7 @@ module.exports.run = (client, msg, args) => {
     msg.channel.send("Pong!");
     const embed = new MessageEmbed()
         .setAuthor(`${msg.author.username}`)
-        .setColor("#ffa500")
+        .setColor("#ff0000")
         .setDescription(`**Action**: ping\n**Channel**: ${msg.channel.name}`)
         .setThumbnail(msg.author.avatarURL())
         .setTimestamp();

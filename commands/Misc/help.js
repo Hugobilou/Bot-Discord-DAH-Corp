@@ -6,7 +6,7 @@ const categoryList = readdirSync('./commands');
 module.exports.run = (client, msg, args) => {
     const embed = new MessageEmbed()
         .setAuthor(`${msg.author.username}`)
-        .setColor("#ffa500")
+        .setColor("#ff0000")
         .setDescription(`**Action**: help\n**Channel**: ${msg.channel.name}`)
         .setThumbnail(msg.author.avatarURL())
         .setTimestamp();
@@ -16,7 +16,7 @@ module.exports.run = (client, msg, args) => {
     if (!args.length){
         const embed = new MessageEmbed()
             .setColor("#36393F")
-            .addField("Liste des commandes", `Une liste de toutes les sous-catégories disponible et leurs commandes\nPour plus d'information sur une commande, tapez \`${PREFIX}help <command_name\``)
+            .addField("Liste des commandes", `Une liste de toutes les sous-catégories disponible et leurs commandes\nPour plus d'information sur une commande, tapez \`${PREFIX}help <command_name>\``)
 
         for (const category of categoryList) {
             embed.addField(
