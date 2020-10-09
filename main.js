@@ -40,6 +40,20 @@ client.on('message', msg => {
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
     client.user.setPresence({activity: { name: '$help', type: 'PLAYING'}});
+	
+    setInterval(function(){
+      var date = new Date();
+      var heure = date.getHours();
+      var minutes = date.getMinutes();
+      console.log(date);
+      console.log(heure+" "+minutes);
+      if(heure === 16) {
+        if(minutes === 0) {
+          console.log('goûter')
+          client.channels.cache.get('249832831222677504').send("<@239383556252499968> C'est l'heure du goûter ! :cookie:");
+        }
+      }
+    }, 60000);
 });
 
 client.login(process.env.TOKEN);

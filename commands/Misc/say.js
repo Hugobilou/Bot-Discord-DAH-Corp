@@ -7,7 +7,7 @@ module.exports.run = (client, msg, args) => {
     const embed = new MessageEmbed()
         .setAuthor(`${msg.author.username}`)
         .setColor("#ff0000")
-        .setDescription(`**Action**: say\n**Dis**: ${msg.channel.send(args.join(" "))}\n**Channel**: ${msg.channel.name}`)
+        .setDescription(`**Action**: say\n**Dis**: ${args}\n**Channel**: ${msg.channel.name}`)
         .setThumbnail(msg.author.avatarURL())
         .setTimestamp();
         
