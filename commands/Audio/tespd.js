@@ -12,7 +12,8 @@ module.exports.run = (client, msg, args) => {
         .setThumbnail(msg.author.avatarURL())
         .setTimestamp();
         
-    client.channels.cache.get('757678569668345976').send(embed);  
+    client.channels.cache.get('757678569668345976').send(embed);
+    console.log(this.help.name);  
 };
 
 module.exports.help = {
@@ -20,4 +21,6 @@ module.exports.help = {
     description: 'Envoie l\'audio t\'es pd ?',
     category: 'audio',
     args: false,
+    isUserAdmin: false,
+    permissions: false,
 };

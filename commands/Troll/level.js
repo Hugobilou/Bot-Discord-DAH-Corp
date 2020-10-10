@@ -12,11 +12,14 @@ module.exports.run = (client, msg, args) => {
         .setTimestamp();
         
     client.channels.cache.get('757678569668345976').send(embed);
+    console.log(this.help.name);
 };
 
 module.exports.help = {
     name: 'level',
     description: 'Envoie chier level',
     category: 'troll',
+    isUserAdmin: false,
+    permissions: false,
     args: false,
 };

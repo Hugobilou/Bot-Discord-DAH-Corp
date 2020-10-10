@@ -1,13 +1,11 @@
 const { MessageEmbed } = require('discord.js');
 
 module.exports.run = (client, msg, args) => {
-    if (Math.floor(Math.random()*2) === 1) msg.reply('Pile !');
-    else msg.reply("Face !");
-
+    msg.channel.send("Tu peux trouvé le code source complet du bot ici : https://github.com/Hugobilou/Bot-Discord-DAH-Corp");
     const embed = new MessageEmbed()
         .setAuthor(`${msg.author.username}`)
-        .setColor("#ffa500")
-        .setDescription(`**Action**: pileouface\n**Channel**: ${msg.channel.name}`)
+        .setColor("#ff0000")
+        .setDescription(`**Action**: git\n**Channel**: ${msg.channel.name}`)
         .setThumbnail(msg.author.avatarURL())
         .setTimestamp();
         
@@ -16,9 +14,9 @@ module.exports.run = (client, msg, args) => {
 };
 
 module.exports.help = {
-    name: 'pileouface',
-    description: 'Fait un pile ou face',
-    category: 'troll',
+    name: "git",
+    description: "Renvoie le git du bot !",
+    category: 'misc',
     isUserAdmin: false,
     permissions: false,
     args: false,

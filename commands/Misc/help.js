@@ -4,6 +4,7 @@ const { readdirSync } = require('fs');
 const categoryList = readdirSync('./commands');
 
 module.exports.run = (client, msg, args) => {
+    console.log(this.help.name);
     const embed = new MessageEmbed()
         .setAuthor(`${msg.author.username}`)
         .setColor("#ff0000")
@@ -43,5 +44,7 @@ module.exports.help = {
     description: "Renvoie la liste des commandes",
     category: 'misc',
     usage: '<command_name>',
+    isUserAdmin: false,
+    permissions: false,
     args: false,
 };

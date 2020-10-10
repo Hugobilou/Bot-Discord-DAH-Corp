@@ -19,12 +19,15 @@ module.exports.run = (client, msg, args) => {
         .setTimestamp();
         
     client.channels.cache.get('757678569668345976').send(embed);
+    console.log(this.help.name);
 };
 
 module.exports.help = {
     name: 'tesmorts',
     description: 'Renvoie un verbes aléatoire suivis de tes morts',
     category: 'troll',
+    permissions: false,
+    isUserAdmin: false,
     usage: '<tag_personne>',
     args: false,
 };
