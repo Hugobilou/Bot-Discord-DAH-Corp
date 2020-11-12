@@ -16,9 +16,5 @@
     "discord.js": "^12.3.1",
     "enmap": "^5.7.1",
     "erela.js": "^2.0.0",
-    "mongoose": "^5.10.4",
-    "opusscript": "0.0.7",
-    "ytdl-core": "^3.3.0",
-    "ytdl-core-discord": "amishshah/ytdl-core-discord"
   }
 }
