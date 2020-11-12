@@ -15,6 +15,6 @@
     "better-sqlite3": "^7.1.0",
     "discord.js": "^12.3.1",
     "enmap": "^5.7.1",
-    "erela.js": "^2.0.0",
+    "erela.js": "^2.0.0"
   }
 }
