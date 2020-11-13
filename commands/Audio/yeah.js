@@ -2,7 +2,7 @@ const { MessageEmbed, MessageAttachment } = require('discord.js');
 
 module.exports.run = (client, msg, args) => {
     msg.delete();
-    const attachment = new MessageAttachment('./audio/travis.mp3')
+    const attachment = new MessageAttachment('./audio/travis.webm')
     msg.channel.send(attachment);
 
     const embed = new MessageEmbed()
