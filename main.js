@@ -51,8 +51,16 @@ client.on('ready', () => {
       var minutes = date.getMinutes();
       if(heure === 15) {
         if(minutes === 0) {
-          console.log('goûter')
+          console.log('goûter');
           client.channels.cache.get('249832831222677504').send("<@239383556252499968> C'est l'heure du goûter ! :cookie:");
+        }
+      }
+	  var facteurDayCount = 36;
+      if(heure === 9) {
+        if(minutes === 0) {
+          console.log('facteur');
+          client.channels.cache.get('249832831222677504').send("Jour "+facteurDayCount+", toujours aucun courriers du facteur.");
+          facteurDayCount = facteurDayCount + 1;
         }
       }
     }, 60000);
