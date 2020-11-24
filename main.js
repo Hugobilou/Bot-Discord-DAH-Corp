@@ -64,7 +64,7 @@ client.on('ready', () => {
       if(heure === 9) {
         if(minutes === 0) {
           console.log('facteur')
-          client.channels.cache.get('249832831222677504').send("Jour "+day+", toujours aucun courriers du facteur.")
+          client.channels.cache.get('249832831222677504').send("Jour "+day+", toujours aucun courrier du facteur.")
 			  .then(function (msg) {
 				msg.react("📨")
             });
