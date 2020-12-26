@@ -1,13 +1,12 @@
 const { MessageEmbed } = require('discord.js');
 
 module.exports.run = (client, msg, args) => {
-    if (Math.floor(Math.random()*2) === 1) msg.reply('Pile !');
-    else msg.reply("Face !");
+    msg.reply(Math.floor(Math.random() * Math.floor(8))+1);
 
     const embed = new MessageEmbed()
         .setAuthor(`${msg.author.username}`)
-        .setColor("#ffa500")
-        .setDescription(`**Action**: pileouface\n**Channel**: ${msg.channel.name}`)
+        .setColor("#008000")
+        .setDescription(`**Action**: d8\n**Channel**: ${msg.channel.name}`)
         .setThumbnail(msg.author.avatarURL())
         .setTimestamp();
         
@@ -16,9 +15,9 @@ module.exports.run = (client, msg, args) => {
 };
 
 module.exports.help = {
-    name: 'pileouface',
-    description: 'Fait un pile ou face',
-    category: 'troll',
+    name: 'd8',
+    description: 'Lance un dé a 8 faces',
+    category: 'random',
     isUserAdmin: false,
     permissions: false,
     args: false,
