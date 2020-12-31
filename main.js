@@ -52,7 +52,7 @@ client.on('ready', () => {
       var diff = (date - start) + ((start.getTimezoneOffset() - date.getTimezoneOffset()) * 60 * 1000);
       var oneDay = 1000 * 60 * 60 * 24;
       var day = Math.floor(diff / oneDay);
-      day = day - 291;
+      day = day + 75;
       console.log('Jours facteur: ' + day);
       if(heure === 6) {
         if(minutes === 0) {
